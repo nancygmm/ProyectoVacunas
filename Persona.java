@@ -1,17 +1,23 @@
+import java.util.*;
+
 public class Persona {
+
+    Scanner in = new Scanner(System.in);
+    ArrayList<Persona> pacientes = new ArrayList<Persona>();
     
     private String nombre;
     private String apellido;
     private int edad;
     private int telefono;
-    private int dpi;
 
-    public Persona(String nombre, String apellido, int edad, int telefono, int dpi) {
+    public Persona(String nombre, String apellido, int edad, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.telefono = telefono;
-        this.dpi = dpi;
+    }
+
+    public Persona() {
     }
 
     public String getNombre() {
@@ -38,10 +44,17 @@ public class Persona {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    public int getDpi() {
-        return dpi;
-    }
-    public void setDpi(int dpi) {
-        this.dpi = dpi;
+     public void paciente(){
+        System.out.println("Ingrese el nombre del paciente: ");
+        String nombre = in.nextLine();
+        System.out.println("Ingrese el apellido del paciente: ");
+        String apellido = in.nextLine();
+        System.out.println("Ingrese la edad: ");
+        int edad = in.nextInt();
+        System.out.println("Ingrese un número de teléfono: ");
+        int telefono = in.nextInt();
+        Persona persona = new Persona(nombre, apellido, edad, telefono);
+        pacientes.add(persona);
+        System.out.println(pacientes);
     }
 }
