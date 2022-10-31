@@ -44,17 +44,19 @@ public class Persona {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-     public void paciente(){
-        System.out.println("Ingrese el nombre del paciente: ");
-        String nombre = in.nextLine();
-        System.out.println("Ingrese el apellido del paciente: ");
-        String apellido = in.nextLine();
-        System.out.println("Ingrese la edad: ");
-        int edad = in.nextInt();
-        System.out.println("Ingrese un número de teléfono: ");
-        int telefono = in.nextInt();
-        Persona persona = new Persona(nombre, apellido, edad, telefono);
-        pacientes.add(persona);
-        System.out.println(pacientes);
+    public void paciente(){
+        
+            System.out.println("Ingrese el nombre del paciente: ");
+            String nombre = in.nextLine();
+            System.out.println("Ingrese el apellido del paciente: ");
+            String apellido = in.nextLine();
+            System.out.println("Ingrese la edad del paciente: ");
+            int edad = in.nextInt();
+            System.out.println("Ingrese un número de teléfono: ");
+            int telefono = in.nextInt();
+            Persona persona = new Persona(nombre, apellido, edad, telefono);
+            pacientes.add(persona);
+       
     }
+
 }

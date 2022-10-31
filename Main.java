@@ -11,20 +11,30 @@ public class Main {
         String[] vacunasFaltantes = new String[]{};
         Scanner in = new Scanner(System.in);
         System.out.println("Bienvenid@");
-        System.out.println("1. Hacer cita de vacunación para bebés");
-        System.out.println("2. Hacer cita de vacunación para niños y jóvenes");
-        System.out.println("3. Hacer cita de vacunación para adultos");
+        System.out.println("A continuación podrá crear una cita dependiendo la edad del paciente");
+        System.out.println("1. Hacer cita de vacunación para bebés (0 a 3 años)");
+        System.out.println("2. Hacer cita de vacunación para niños y jóvenes (4 a 18 años)");
+        System.out.println("3. Hacer cita de vacunación para adultos (18 años en adelante)");
         System.out.println("4. Salir");
         int op = in.nextInt();
         
         if (op == 1){
             persona.paciente();
+            System.out.println("A continuación se presentarán las vacunas correspondientes para su edad ");
+           for (String string : vbb) {
+            System.out.println(string);
+           }
+           System.out.println("A continuación ingrese el numero de cada vacuna faltante: ");
+           ArrayList<String> mm1 = Vacunas.crearListaBB();
+           System.out.println(mm1);
         }
         if (op == 2){
             persona.paciente();
+            System.out.println("A continuación se presentarán las vacunas correspondientes para su edad ");
         }
         if (op == 3){
             persona.paciente();
+            System.out.println("A continuación se presentarán las vacunas correspondientes para su edad ");
         }
     }
 }
