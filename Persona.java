@@ -1,25 +1,33 @@
-import java.util.*;
-
 public class Persona {
-
-    Scanner in = new Scanner(System.in);
-    ArrayList<Persona> pacientes = new ArrayList<Persona>();
-    
+    /**
+     * Atributos para persona
+     */
     private String nombre;
     private String apellido;
     private int edad;
     private int telefono;
-
+    /**
+     * Contructor
+     * @param nombre
+     * @param apellido
+     * @param edad
+     * @param telefono
+     */
     public Persona(String nombre, String apellido, int edad, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.telefono = telefono;
     }
+    /**
+     * Constructor vacío
+     */
+    public Persona(){}
 
-    public Persona() {
-    }
-
+    /**
+     * Gets y sets de la clase Persona
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }
@@ -44,19 +52,8 @@ public class Persona {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    public void paciente(){
-        
-            System.out.println("Ingrese el nombre del paciente: ");
-            String nombre = in.nextLine();
-            System.out.println("Ingrese el apellido del paciente: ");
-            String apellido = in.nextLine();
-            System.out.println("Ingrese la edad del paciente: ");
-            int edad = in.nextInt();
-            System.out.println("Ingrese un número de teléfono: ");
-            int telefono = in.nextInt();
-            Persona persona = new Persona(nombre, apellido, edad, telefono);
-            pacientes.add(persona);
-       
+    public void add(Persona p) {
     }
+    
 
 }
