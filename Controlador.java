@@ -19,20 +19,24 @@ public class Controlador {
      */
     public void General(){
         System.out.println("Bienvenido al programa de vacunación :)");
-        System.out.println("A continuación podrá escoger el hospital donde desea vacunarse");
+        Hospital g = new Hospital(null);
+        ArrayList<Hospital> lhospital = new ArrayList<Hospital>();
+        g.setNombre(null);
+        lhospital.add(g);
+        System.out.println("Por favor ingrese el nombre del hospital donde desea vacunarse");
+        String nom = in.next();
+        System.out.println("Se ha agregado el hospital con éxito");
+        System.out.println("A continuación podrá ingresar uno o varios pacientes");
         Persona p = new Persona(null, null, 0, 0);
         Persona pacientes = paciente();
         ArrayList<Persona> lpaciente = new ArrayList<Persona>();
-        System.out.println("A continuación podrá ingresar uno o varios pacientes");
         lpaciente.add(pacientes);
         p.setNombre(null);
         p.setApellido(null);
         p.setEdad(0);
         p.setTelefono(0);
         pacientes.add(p);
-        System.out.println("Por favor ingrese el nombre del Hospital");
         String nombre = in.nextLine();
-        System.out.println("Se ha agregado el hospital con éxito");
         System.out.println("A continuación podrá agregar las vacunas que necesite");
         Vacunas v = new Vacunas(nombre);
         Vacunas vacunnn = vac();
@@ -49,9 +53,9 @@ public class Controlador {
         h.setHorario(lhorarios);
         hospitales.add(h);
         System.out.println("Se ha/n agregado el/los horario/s con éxito");
-        System.out.println(pacientes);
-        System.out.println(vacunas);
-        System.out.println(hospitales);
+        System.out.println(lpaciente);
+        System.out.println(lvacunnn);
+        System.out.println( lhospital);
         System.out.println("Gracias por utilizar este servicio, que tenga buen día :D");
     }
     /**
